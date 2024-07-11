@@ -203,7 +203,7 @@ const std::vector<Vector>& renderVertices() const { return m_renderVertices; }
 Note that other inline functions may exist and other getter-like functions as well which don't fit the above definitions. For example `std::vector::size` typically returns `end - begin`. With this style guide this function would look like this:
 
 ```c++
-size_t getSize() const 
+size_t getSize() const
 {
     return m_end - m_begin;
 }
@@ -255,7 +255,7 @@ enum Axis {
     Axis_Z
 };
 
-// or even 
+// or even
 
 enum class Operation {
     Add,
@@ -305,6 +305,7 @@ while (*a++ == *b++);
 for (int i=0; func(i); ++i);
 void noop() {}
 struct tag : public tagged {};
+```
 
 ### ... and single line return-val functions
 
