@@ -46,7 +46,7 @@ My library [itlib](https://github.com/iboB/itlib) follows Karisik even though it
     * Which one to choose is up to you. If you envision writing complex install scripts for the library and ship it closed-source, then you life would be a bit easier doing this if you have separate public and private directories. Otherwise, don't bother.
 * Repo subdirectories are in Hyphen case or K&R case. They are much easier to navigate in the terminal this way.
     * Subdirectories of `code`, `include` and `src` are in K&R case, presumably matching namespaces or library names contained within.
-* For libraries in the headers directory (`code` or `include`) add an additional subdirectory with the library's name. Thus including files from the library will be also be namespaced `#include <lib/file.h>` and the risk of clasesh will be minimal.
+* For libraries in the headers directory (`code` or `include`) add an additional subdirectory with the library's name. Thus including files from the library will be also be namespaced `#include <lib/file.h>` and the risk of clashes will be minimal.
 * Separate logically related groups of files into subdirectories (and optionally namespaces)
     * If a library's source is splint into `src` and `include` you will sadly have to duplicate the tree in `src/` and `include/<library name>/`.
 
@@ -60,7 +60,7 @@ My library [itlib](https://github.com/iboB/itlib) follows Karisik even though it
 * C
     * File names are in C case
     * Header files have a `.h` extension
-    * Source files have a `.cpp` extension
+    * Source files have a `.c` extension
     * Inline files have a `.i` extension (`inl` is also acceptable but follow-through, don't mix `.i` and `.inl`)`
 * In certain cases there are files which extend existing ones. Separate the extension with dot + Camel case. For example if you want I/O operations for a class `Foo` you would have `Foo.hpp` and `Foo.io.hpp`
 * Prefix non-project files with a letter/word + `hyphen` (making them Crazy case at times). This is help you navigate to files (Ctrl-P-style) easier and easily distinguish them from the main project counterparts. Using Hyphen case for special files with no counterparts is acceptable
@@ -112,7 +112,7 @@ std::map<std::string, std::string> name2addr;
 Plus when is this being used? If those are local variables in a function, this is not C. Variables are declared before being used, not at the beginning of the function. If those are fields in a struct it's more often than not you tend to have comments above them. Comments above make this look even worse:
 
 ```c++
-// counf of instances
+// count of instances
 int                                count = 0;
 
 // speed in meters per second
