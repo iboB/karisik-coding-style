@@ -19,7 +19,7 @@ The goal of this style is to make development easier and symbols visually distin
 
 ### Symbol Name Cases
 
-- **C case**: `this_is_c_case` - all lowercase with words separated by underscores.
+- **C case** (aka snake case): `this_is_c_case` - all lowercase with words separated by underscores.
 - **All Caps case**: `THIS_IS_CAPS_CASE` - all caps with words separated by underscores.
 - **Pascal case**: `ThisIsPascalCase` - first letter is capitalized, and each word begins with a capital letter.
 - **Camel case**: `thisIsCamelCase` - like Pascal case but the first letter is lowercase.
