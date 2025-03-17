@@ -36,7 +36,7 @@ The goal of this style is to make development easier and symbols visually distin
 
 ## Standard-library-like code
 
-Some code is undoubtedly standard-library-like. It might be a custom string, or a custom container. It is acceptable to write such code the way the standard library is written: Everything in C case. (Take a look at the [Boost Design and Programming requirements](https://www.boost.org/development/requirements.html#Design_and_Programming) for a bit ore detail)
+Some code is undoubtedly standard-library-like. It might be a custom string, or a custom container. It is acceptable to write such code the way the standard library is written: Everything in C case. (Take a look at the [Boost Design and Programming requirements](https://www.boost.org/development/requirements.html#Design_and_Programming) for a bit more detail)
 
 As a rule of thumb, imagine the code actually being a part of the standard library. If you don't find yourself shocked by the idea, then it's likely a good idea to use the standard-library-like style, and disregard the rest of this document.
 
