@@ -1,29 +1,34 @@
-﻿# Karisik
+﻿# Karisik Coding Style
 
-Karisik is Coding Style For C++ (and also C, but not as much).
-
-The name is a simplified version of the Turkish word "karışık" which means "mixed" and it truly is a mixed bag of styles.
-
-The goal of the style is first to make development easier and second to make symbols visually distinct.
+Karisik is a coding style for C++ (and to some extent C). The name is a simplified version of the Turkish word "karışık," which means "mixed," and it truly is a mixed bag of styles.
 
 This document was initially written in 2012 and has been modified many times since. It will likely be updated in the future.
 
-**Use judgement!**. This is mentioned multiple times in the document to remind you. This is not a bible, but a guideline. If you think something is better done differently, do it differently (and preferably document it)
+## Philosophy
 
-## Some terminology
+The Karisik style prioritizes readability, maintainability, and developer productivity. It encourages flexibility while providing clear guidelines to avoid common pitfalls.
 
-Symbol name cases:
+The goal of this style is to make development easier and symbols visually distinct.
 
-* C case - `this_is_c_case` - all-lowercase with separate words separated by underscores.
-* All Caps case - `THIS_IS_CAPS_CASE` - all-caps with separate words separated by underscores.
-* Pascal case - `ThisIsPascalCase` - first letter is capital and separate words begin with capital letters.
-* Camel case - `thisIsCamelCase` - same as Pascal case but the first letter is lowercase.
-* K&R case - `thisisknrcase` - all-lowercase with no separators between words and abbreviations are encouraged.
-* Mixed case - `This_Is_MixedCase` - same as Pascal case, but at least some words are separated by underscores
-* Hyphen case - `this-is-hyphen-case` - all-lowercase with separate words separated by hyphens (obviously not used in symbol names)
-* Crazy case - `thisIS_Crazy_case_pR0baB1y` - everything else
+> [!NOTE]
+> **Use judgment!**
+> This is not a strict set of rules but a guideline.
+> If you think something is better done differently, do it differently (and preferably document it).
 
-File types:
+## Some Terminology
+
+### Symbol Name Cases
+
+- **C case**: `this_is_c_case` - all lowercase with words separated by underscores.
+- **All Caps case**: `THIS_IS_CAPS_CASE` - all caps with words separated by underscores.
+- **Pascal case**: `ThisIsPascalCase` - first letter is capitalized, and each word begins with a capital letter.
+- **Camel case**: `thisIsCamelCase` - like Pascal case but the first letter is lowercase.
+- **K&R case**: `thisisknrcase` - all lowercase with no separators between words; abbreviations are encouraged.
+- **Mixed case**: `This_Is_MixedCase` - like Pascal case but with some words separated by underscores.
+- **Hyphen case**: `this-is-hyphen-case` - all lowercase with words separated by hyphens (not used for symbol names).
+- **Crazy case**: `thisIS_Crazy_case_pR0baB1y` - everything else.
+
+### File types:
 
 * **source files** - files supplied to the compiler. Note that some other documents refer to these as *compilation units*, and use the term *source files* to group them with headers too.
 * **header files** - files included in source files *and have include guards*
@@ -35,7 +40,7 @@ Some code is undoubtedly standard-library-like. It might be a custom string, or 
 
 As a rule of thumb, imagine the code actually being a part of the standard library. If you don't find yourself shocked by the idea, then it's likely a good idea to use the standard-library-like style, and disregard the rest of this document.
 
-My library [itlib](https://github.com/iboB/itlib) follows Karisik even though it's entirely in C case.
+For example my library [itlib](https://github.com/iboB/itlib) follows Karisik even though it's entirely in C case.
 
 ## Files and directories
 
